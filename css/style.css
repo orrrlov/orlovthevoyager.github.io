@@ -1,0 +1,43 @@
+body, html {
+    margin: 0;
+    background: black;
+    font-family: Monospace;
+    letter-spacing: 1px;
+}
+.terminal {
+    padding: 0 15px;
+}
+p, label {
+    font-size: 16px;
+    color: white;
+}
+span {
+    display: block;
+}
+input {
+    outline: none; 
+    background: black;
+    border: none;
+    color: white;
+    font-family: monospace;
+    font-size: 16px;
+    letter-spacing: 1px;
+    width: calc(100% - 170px);
+}
+.first-command:before {
+    content: "root@Voyager: ~$ ";
+    color: lawngreen;
+}
+.output {
+    white-space: pre;
+}
+.command {
+    margin-top: 16px;
+}
+.command:before {
+    content: "user@Voyager: ~$ ";
+    color: lawngreen;
+}
+label {
+    color: lawngreen;
+}

@@ -6,65 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>|&nbsp; Orlov The Voyager</title>
     <link rel="icon" href="img/icon.png">
-    <style>
-        body, html {
-            margin: 0;
-            background: black;
-            font-family: Monospace;
-            letter-spacing: 1px;
-        }
-        .terminal {
-            padding: 0 15px;
-        }
-        p, label {
-            font-size: 16px;
-            color: white;
-        }
-        input {
-            outline: none; 
-            background: black;
-            border: none;
-            color: white;
-            font-family: monospace;
-            font-size: 16px;
-            letter-spacing: 1px;
-            width: calc(100% - 170px);
-        }
-        .output {
-            white-space: pre;
-        }
-        .command:before {
-            content: "user@Voyager: ~$ ";
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 </head>
 <body>
     <div id="app" class="terminal">
-        <p>
+        <p id="test">
             <span class="first-command">
-                root@Voyager: ~$ satellite start
+                satellite start
             </span>
             <span class="output">
 
 
+         __  __            _    __                                 
+        / /_/ /_  ___     | |  / /___  __  ______ _____ ____  _____
+       / __/ __ \/ _ \    | | / / __ \/ / / / __ `/ __ `/ _ \/ ___/
+      / /_/ / / /  __/    | |/ / /_/ / /_/ / /_/ / /_/ /  __/ /    
+      \__/_/ /_/\___/     |___/\____/\__, /\__,_/\__, /\___/_/     
+                                    /____/      /____/              
 
-                 __  __            _    __                                 
-                / /_/ /_  ___     | |  / /___  __  ______ _____ ____  _____
-               / __/ __ \/ _ \    | | / / __ \/ / / / __ `/ __ `/ _ \/ ___/
-              / /_/ / / /  __/    | |/ / /_/ / /_/ / /_/ / /_/ /  __/ /    
-              \__/_/ /_/\___/     |___/\____/\__, /\__,_/\__, /\___/_/     
-                                            /____/      /____/              
 
+                                            
+Welcome to my web application!
+My name is Igor and I am a Back-End Developer.
 
-    Welcome to my web application!
+Commands:
+
+    about               Outputs info about me.
+    contact             Get my contact informations.
+    cv                  Downloads my CV.
+    projects            Lists all projects that I've participated on.
+    references          They said about me.
 
             </span>
         </p>
         <div class="input-row">
             <label for="input">user@Voyager: ~$ </label>
-            <input type="text" id="input" autofocus>
+            <input type="text" id="input" autofocus @keyup.enter="submit">
         </div>
     </div>
-
+    <script src="js/index.js"></script>
 </body>
 </html>
